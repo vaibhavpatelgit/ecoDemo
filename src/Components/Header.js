@@ -23,7 +23,11 @@ function Header() {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
-
+            {currentUser ? (
+              <NavDropdown.Item as={Link} to="/ProductList">
+                Product List
+              </NavDropdown.Item>
+            ) : null}
             {currentUser ? (
               <>
                 <Nav.Link as={Link} to="/">
@@ -33,9 +37,7 @@ function Header() {
                   <NavDropdown.Item as={Link} to="/product-master">
                     Modify Product
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to="/ProductList">
-                    Product List
-                  </NavDropdown.Item>
+
                   <NavDropdown.Item href="#action/3.3">
                     User Side UI
                   </NavDropdown.Item>

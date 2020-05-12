@@ -6,7 +6,7 @@ import { Table } from "react-bootstrap";
 
 function ProductList() {
   const [products, isLoading] = useProducts();
-
+  console.log(products);
   return (
     <Table striped bordered hover>
       <thead>

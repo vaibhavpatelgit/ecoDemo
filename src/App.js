@@ -68,6 +68,9 @@ function App() {
                 <Route path={"/CountryList"}>
                   <CountryList />
                 </Route>
+                <Route path={"/Country/:id"}>
+                  <Country />
+                </Route>
               </>
             )}
 

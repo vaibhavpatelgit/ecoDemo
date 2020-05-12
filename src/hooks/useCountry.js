@@ -4,8 +4,6 @@ import getFirebaseDataQuery from "../query/getFirebaseData";
 function useCountry(id) {
   const [country, setCountry] = useState([]);
   const [loading, setLoading] = useState(false);
-  console.log(id);
-
   useEffect(() => {
     if (id) {
       setLoading(true);
@@ -28,6 +26,8 @@ function useCountry(id) {
         .finally(() => {
           setLoading(false);
         });
+    } else {
+      console.log("Id not found");
     }
   }, [setLoading, setCountry]);
 
